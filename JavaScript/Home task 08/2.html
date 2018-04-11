@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid black;
+            width: 400px;
+            height: 100px;
+            font-size: 20px;
+            background-color: coral
+            
+            
+        }
+        
+        td {
+            border: 1px solid black;
+            background-color: aqua;
+        }
+    
+    </style>
+</head>
+<body>
+   
+   <h3>Информация о товаре</h3>
+    <table>
+    <tr>
+      <td>Наименование</td>
+      <td>Цена</td>
+      <td>Код</td>
+    </tr>
+     <tr id="list">
+         
+    </tr>
+    </table>
+       
+       
+   
+    <script>
+    var ball = {
+        name: "Мяч",
+        price: "10$",
+        code: '002'
+        }
+    var table = {
+        name: "Стол",
+        price: "50$",
+        code: '003'
+        }
+    var phone = {
+        name: "Телефон",
+        price: "100$",
+        code: '001'
+        }
+    
+        var product = prompt('Выберите нужный товар',' 1 - Телефон, 2 - Мяч, 3 - Стол');
+        
+        if (product == 1) {
+        
+        var newLi = document.createElement('td');
+        
+        var name = phone.name;
+        newLi.innerHTML = name;
+        list.insertBefore(newLi, list.children[0]);
+        var newLi2 = document.createElement('td');
+        var price = phone.price;
+        newLi2.innerHTML = price;
+        list.insertBefore(newLi2, list.children[1]);
+        var newLi3 = document.createElement('td');
+        var code = phone.code;
+        newLi3.innerHTML = code;
+        list.insertBefore(newLi3, list.children[2]);
+            
+        } if (product == 2) {
+        
+        var newLi = document.createElement('td');
+        var name = ball.name;
+        newLi.innerHTML = name;
+        list.insertBefore(newLi, list.children[0]);
+        var newLi2 = document.createElement('td');
+        var price = ball.price;
+        newLi2.innerHTML = price;
+        list.insertBefore(newLi2, list.children[1]);
+        var newLi3 = document.createElement('td');
+        var code = ball.code;
+        newLi3.innerHTML = code;
+        list.insertBefore(newLi3, list.children[2]);
+            
+        } if (product == 3) {
+        
+        var newLi = document.createElement('td');
+        var name = table.name;
+        newLi.innerHTML = name;
+        list.insertBefore(newLi, list.children[0]);
+        var newLi2 = document.createElement('td');
+        var price = table.price;
+        newLi2.innerHTML = price;
+        list.insertBefore(newLi2, list.children[1]); 
+        var newLi3 = document.createElement('td');   
+        var code = table.code;
+        newLi3.innerHTML = code;
+        list.insertBefore(newLi3, list.children[2]);
+            
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
