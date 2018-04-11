@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	var a = [12,4,3,10,1,20];
+	var min = a[0];
+	var max = a[0];
+	
+    alert('Начальный массив ' + a);
+	for(var i = 1; i < a.length; i++)
+	{
+		if (a[i] > max)
+		{
+			max = a[i];
+		}
+		if (a[i] < min)
+		{
+			min = a[i];
+		}
+        
+	}
+    
+    for(var i = 1; i < a.length; i++)
+	{
+		if (a[i] === max) {
+            delete a[i];
+        }
+        if (a[i] === min) {
+            delete a[i];
+        }
+	}
+        
+	alert('Массив без минимального и максимального значения ' + a);
+    
+    
+</script>
+</body>
+<footer></footer>
+</html>
