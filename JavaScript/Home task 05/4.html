@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var days = prompt('Введите количество дней');
+        
+    var daysQuantity = function(days) {
+        if (days == 1 || (days%10 == 1 && days%100 !== 11)) {
+            alert(days + ' день');
+        } else if (days >=2 && days <=4 || days%10 >=2 && days%10 <=4 && days >20) {
+            alert(days + ' дня');
+        } else  {
+            alert(days + ' дней');
+        }
+        
+        
+    }
+    
+    daysQuantity(days);
+    
+    
+    </script>
+</body>
+</html>
