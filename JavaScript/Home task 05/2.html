@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var arrA = [0,1,2,3,4];
+    var arrB = [3,4,5,6,7];
+        
+    var arrC = arrA.concat(arrB);
+    arrC.sort();
+    
+    for(i = 0; i < arrC.length; i++) {
+        if (arrC[i] == arrC[i-1]) {
+            arrC.splice(i,1);
+        }
+    }
+    
+    alert(arrC);      
+    
+    </script>
+</body>
+</html>
