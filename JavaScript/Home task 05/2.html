@@ -6,19 +6,22 @@
 </head>
 <body>
     <script>
-    var arrA = [0,1,2,3,4];
+    var arrA = [0,1,2,2,2,2,2,3,4];
     var arrB = [3,4,5,6,7];
         
     var arrC = arrA.concat(arrB);
     arrC.sort();
     
-    for(i = 0; i < arrC.length; i++) {
-        if (arrC[i] == arrC[i-1]) {
-            arrC.splice(i,1);
+    var unique = function(arrC) {
+        var obj = {};
+        for (var i = 0; i < arrC.length; i++) {
+            var str = arrC[i];
+            obj[str] = true;
         }
+        return Object.keys(obj);
     }
-    
-    alert(arrC);      
+        
+    alert(unique(arrC));      
     
     </script>
 </body>

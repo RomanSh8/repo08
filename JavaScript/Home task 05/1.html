@@ -13,11 +13,14 @@
             interests: ['Музыка', 'Программирование'],
             univrsity: 'ITMO'
         };
-        
-    for(var key in student) {
-        alert(key + ": " + student[key] );
-}
-            
+     
+    var studentInfo = function() {
+        for(var key in student) {
+            console.log(key + ": " + student[key] );
+        }
+    }
+    
+    studentInfo();
     </script>
 </body>
 </html>
